@@ -4,15 +4,15 @@
  
 /* ---------- 1. Kleuren en variabelen (hier aanpassen) ---------- */
 :root {
-  --bg: #f6f4ef;            /* pagina-achtergrond */
+  --bg: #e9d7cb	;            /* pagina-achtergrond */
   --panel: #ffffff;         /* achtergrond van de vlakken */
-  --ink: #1c2521;           /* hoofdtekst */
-  --soft: #5c655f;          /* secundaire tekst */
-  --line: #e2ddd2;          /* randen */
+  --ink: #27234a	;           /* hoofdtekst */
+  --soft: #27234a	;          /* secundaire tekst */
+  --line: #27234a	;          /* randen */
  
-  --accent: #1f6f54;        /* kleur van actieve gemeentes */
+  --accent: #5f8ac7;        /* kleur van actieve gemeentes */
   --accent-hover: #2fa37c;  /* kleur bij hover/selectie */
-  --accent-soft: #dceee5;   /* lichte accentkleur (lijst) */
+  --accent-soft: #5f8ac7;   /* lichte accentkleur (lijst) */
  
   --land: #e9e6da;          /* niet-actieve gemeentes */
   --stroke: #ffffff;        /* gemeentegrenzen */
