@@ -4,11 +4,11 @@
  
 /* ---------- 1. Kleuren en variabelen (hier aanpassen) ---------- */
 :root {
-  --bg: #e9d7cb	;            /* pagina-achtergrond */
+  --bg: #e9d7cb;            /* pagina-achtergrond */
   --panel: #ffffff;         /* achtergrond van de vlakken */
-  --ink: #27234a	;           /* hoofdtekst */
-  --soft: #27234a	;          /* secundaire tekst */
-  --line: #27234a	;          /* randen */
+  --ink: #27234a;           /* hoofdtekst */
+  --soft: #27234a;          /* secundaire tekst */
+  --line: #27234a;          /* randen */
  
   --accent: #5f8ac7;        /* kleur van actieve gemeentes */
   --accent-hover: #2fa37c;  /* kleur bij hover/selectie */
