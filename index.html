@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Actieve gemeentes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Waar we actief zijn</h1>
+  <p>Gemeentes waar Modernista tot op het heden projecten uit heeft gevoerd.</p>
+</header>
+<div class="wrap">
+  <div class="panel side">
+    <input id="q" placeholder="Zoek een gemeente...">
+    <div class="count" id="count"></div>
+    <ul id="list"></ul>
+  </div>
+  <div class="panel map">
+    <div id="err"></div>
+    <svg id="svg" viewBox="0 0 600 720"></svg>
+    <div id="tip"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
