@@ -27,7 +27,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: "Barlow", system-ui, sans-serif;
 }
 
 /* ---------- 3. Kop ---------- */
@@ -40,7 +40,7 @@ header {
 h1 {
   margin: 0 0 4px;
   font-size: 28px;
-  font-family: Georgia, serif;
+  font-family: "Barlow", system-ui, sans-serif;
 }
 
 header p {
@@ -84,6 +84,7 @@ input {
   padding: 9px 12px;
   border: 1px solid var(--line);
   border-radius: 7px;
+   font-family: inherit;
   font-size: 14px;
   background: var(--bg);
   color: var(--ink);
