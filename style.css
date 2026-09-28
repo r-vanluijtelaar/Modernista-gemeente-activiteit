@@ -1,7 +1,7 @@
 /* ==========================================================
    Gemeentekaart – stijlen
    ========================================================== */
-
+ 
 /* ---------- 1. Kleuren en variabelen (hier aanpassen) ---------- */
 :root {
   --bg: #f6f4ef;            /* pagina-achtergrond */
@@ -9,46 +9,46 @@
   --ink: #1c2521;           /* hoofdtekst */
   --soft: #5c655f;          /* secundaire tekst */
   --line: #e2ddd2;          /* randen */
-
+ 
   --accent: #1f6f54;        /* kleur van actieve gemeentes */
   --accent-hover: #2fa37c;  /* kleur bij hover/selectie */
   --accent-soft: #dceee5;   /* lichte accentkleur (lijst) */
-
+ 
   --land: #e9e6da;          /* niet-actieve gemeentes */
   --stroke: #ffffff;        /* gemeentegrenzen */
 }
-
+ 
 /* ---------- 2. Basis ---------- */
 * {
   box-sizing: border-box;
 }
-
+ 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: "Barlow", system-ui, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-
+ 
 /* ---------- 3. Kop ---------- */
 header {
   max-width: 1180px;
   margin: 0 auto;
   padding: 28px 24px 16px;
 }
-
+ 
 h1 {
   margin: 0 0 4px;
   font-size: 28px;
-  font-family: "Barlow", system-ui, sans-serif;
+  font-family: Georgia, serif;
 }
-
+ 
 header p {
   margin: 0;
   color: var(--soft);
   font-size: 14.5px;
 }
-
+ 
 /* ---------- 4. Layout ---------- */
 .wrap {
   max-width: 1180px;
@@ -58,19 +58,19 @@ header p {
   grid-template-columns: 300px 1fr;
   gap: 20px;
 }
-
+ 
 .panel {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 10px;
 }
-
+ 
 @media (max-width: 820px) {
   .wrap {
     grid-template-columns: 1fr;
   }
 }
-
+ 
 /* ---------- 5. Zijbalk (zoeken + lijst) ---------- */
 .side {
   padding: 16px;
@@ -78,31 +78,30 @@ header p {
   flex-direction: column;
   max-height: 78vh;
 }
-
+ 
 input {
   width: 100%;
   padding: 9px 12px;
   border: 1px solid var(--line);
   border-radius: 7px;
-   font-family: inherit;
   font-size: 14px;
   background: var(--bg);
   color: var(--ink);
 }
-
+ 
 .count {
   margin: 10px 2px 6px;
   font-size: 12.5px;
   color: var(--soft);
 }
-
+ 
 .source {
   margin: 0 2px 8px;
   font-size: 11.5px;
   color: var(--soft);
   word-break: break-word;
 }
-
+ 
 ul {
   list-style: none;
   margin: 0;
@@ -110,57 +109,61 @@ ul {
   overflow-y: auto;
   flex: 1;
 }
-
+ 
 li {
   padding: 7px 10px;
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
 }
-
+ 
 li:hover,
 li.on {
   background: var(--accent-soft);
   color: var(--accent);
   font-weight: 600;
 }
-
+ 
 li.hide {
   display: none;
 }
-
+ 
 /* ---------- 6. Kaart ---------- */
 .map {
   padding: 12px;
   position: relative;
 }
-
+ 
 svg {
   width: 100%;
   height: auto;
   display: block;
 }
-
+ 
 path.g {
   fill: var(--land);
   stroke: var(--stroke);
   stroke-width: 0.5;
 }
-
+ 
+path.g:not(.active):hover {
+  fill: #d9d5c6;
+}
+ 
 path.g.active {
   fill: var(--accent);
   cursor: pointer;
 }
-
+ 
 path.g.active:hover,
 path.g.active.on {
   fill: var(--accent-hover);
 }
-
+ 
 path.g.dim {
   opacity: 0.25;
 }
-
+ 
 /* ---------- 7. Tooltip en foutmelding ---------- */
 #tip {
   position: absolute;
@@ -172,7 +175,7 @@ path.g.dim {
   color: #ffffff;
   font-size: 13px;
 }
-
+ 
 #err {
   display: none;
   margin: 12px;
